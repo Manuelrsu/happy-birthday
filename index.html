@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CORAZONES -->
+
+    <div class="corazon corazon1">❤</div>
+    <div class="corazon corazon2">❤</div>
+    <div class="corazon corazon3">❤</div>
+
+
+
+    <!-- HOME -->
+
+    <section class="home">
+
+        <img src="img/foto.png" alt="Foto" class="foto">
+
+        <div class="titulo">
+            Happy Birthday ❤️
+        </div>
+
+        <div class="subtitulo">
+            Para la persona mas especial en mi vida
+        </div>
+
+    </section>
+
+
+
+    <!-- MENSAJE -->
+
+    <section class="mensaje">
+
+        <div class="mensaje_card">
+
+            <div class="mensaje_titulo">
+                A Message For You
+            </div>
+
+            <div class="mensaje_texto">
+
+                
+
+                Feliz cumpleaños, mi amor 🎂❤️
+
+                <br>
+                Hoy es un día muy especial porque celebro la vida de una persona increíble: Esa eres tú. 
+                Quiero agradecerte por cada momento bonito que me has regalado, por cada sonrisa, cada abrazo 
+                y cada recuerdo que hemos creado juntos.
+                <br>
+                Espero que este nuevo año llegue lleno de felicidad, sueños cumplidos 
+                y muchísimas razones para sonreír. 
+                Te mereces todo lo bueno del mundo porque eres una persona maravillosa.
+                <br>
+                Gracias por hacer mis días mejores y por estar conmigo en tantos momentos importantes. 
+                No sabes lo feliz que me hace tenerte en mi vida.
+                <br>
+                Deseo seguir celebrando muchos cumpleaños más contigo, seguir creando recuerdos 
+                y acompañarte en cada paso que des si me lo permites.
+                <br>
+                Te amo muchísimo y hoy más que nunca quiero recordarte lo especial que eres para mí aunque a veces no parezca. ❤️🎉
+                <br><br>
+
+                Disfruta muchísimo este y todos los demas dias, Reina. Feliz cumpleaños. ✨
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LOVE SECTION -->
+
+    <section class="love">
+
+        <div class="love_titulo">
+            Haz click en el corazon ❤️
+        </div>
+
+        <div class="love_texto">
+            Cada click es mas amor para ti
+        </div>
+
+        <div class="corazon_click" id="corazon">
+            ❤️
+        </div>
+
+        <div class="contador" id="contador">
+           Clicks: <span id="numero">0</span>
+        </div>
+
+        <div class="mensaje_secreto" id="mensaje">
+           Eres lo mejor que me ha pasado en la vida ❤️
+        </div>
+
+    </section>
+
+    <script>
+
+    let contador = 0;
+
+    const corazon = document.getElementById("corazon");
+    const numero = document.getElementById("numero");
+    const mensaje = document.getElementById("mensaje");
+    const contadorTexto = document.getElementById("contador");
+
+    corazon.addEventListener("click", () => {
+
+        contador++;
+
+        numero.textContent = contador;
+
+        let tamaño = 1 + contador * 0.03;
+
+        if(tamaño > 3){
+            tamaño = 3;
+        }
+
+        corazon.style.transform = `scale(${tamaño})`;
+
+
+
+        let mover = contador * 2;
+
+        if(mover > 80){
+           mover = 80;
+        }
+
+        corazon.style.marginTop = mover + "px";
+
+        contadorTexto.style.marginTop = mover + "px";
+
+
+
+        if(contador >= 5){
+
+            mensaje.style.opacity = "1";
+
+            mensaje.innerHTML = "Haces que mis dias sean mas felices ❤️";
+
+        }
+
+
+
+        if(contador >= 10){
+
+            mensaje.innerHTML = "Cada momento contigo es especial 💕";
+
+        }
+
+
+        if(contador >= 20){
+
+            mensaje.innerHTML = "Perdoname por todas las veces que pasaste malos momentos por mi culpa, no fue mi intencion";
+
+        }
+
+
+
+        if(contador >= 35){
+
+            mensaje.innerHTML = "Podria hacer click para siempre y nunca llegar a demostrarte cuanto te amo 💖";
+
+        }
+
+
+
+        if(contador >= 50){
+
+            mensaje.innerHTML = "Happy Birthday my beautiful Queen ❤️✨";
+
+        }
+
+    });
+
+    </script>
+
+</body>
+
+</html>
